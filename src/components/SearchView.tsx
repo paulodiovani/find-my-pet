@@ -314,7 +314,7 @@ export function SearchView({
 	return (
 		<div className="z-10 w-full max-w-7xl container space-y-4 py-8">
 			<Heading level="h1" className="my-4 text-center">
-				Encontre seu Pet (Canoas RS)
+				Encontre seu Pet (Porto Alegre RS)
 			</Heading>
 			<p className="text-center text-neutral-600">
 				Abrigando um Pet? Contate nosso instagram para postarmos

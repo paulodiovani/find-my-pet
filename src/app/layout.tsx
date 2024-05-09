@@ -10,7 +10,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-	title: "Encontre seu Pet Canoas RS",
+	title: "Encontre seu Pet em Porto Alegre",
 	description: "",
 };
 
