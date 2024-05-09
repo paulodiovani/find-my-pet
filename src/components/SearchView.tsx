@@ -317,22 +317,6 @@ export function SearchView({
 				Encontre seu Pet (Porto Alegre RS)
 			</Heading>
 			<p className="text-center text-neutral-600">
-				Abrigando um Pet? Contate nosso instagram para postarmos
-				aqui:
-				<a
-					className={cn(
-						"text-primary underline-offset-4 hover:underline",
-						"inline-flex whitespace-nowrap text-md font-medium ml-2 ring-offset-background transition-colors",
-						"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-					)}
-					href={
-						"https://www.instagram.com/encontreseupet.canoas/"
-					}
-				>
-					@encontreseupet.canoas
-				</a>
-			</p>
-			<p className="text-center text-neutral-600">
 				<AlertTriangle className="inline h-5 w-5  mr-2" />
 				Estamos adicionando mais animais constantemente, se não
 				achar o seu pet, não perca a esperança e volte mais tarde{" "}
