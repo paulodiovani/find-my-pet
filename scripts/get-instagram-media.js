@@ -27,6 +27,8 @@ const pipeline = R.pipe(
   R.andThen(R.path(['response', 'body', 'data', 'user', 'id'])),
   R.andThen(parseInt),
   R.andThen(fetchInstagramMedia),
+  R.andThen(R.path(['response', 'body', 'items'])),
+  R.andThen(R.map(formatMedia)),
   R.andThen(toJson),
   R.andThen(console.log),
   R.otherwise(console.error), // catch
@@ -69,6 +71,19 @@ async function fetchInstagramMedia(userId, maxId = null) {
   };
 
   return rapidApiRequest('/instagram/user/get_media', data)
+}
+
+function formatMedia(item) {
+  return {
+    caption: item.caption?.text,
+    code: item.code,
+    fbid: item.fbid,
+    id: item.id,
+    image_url: item.image_versions2.candidates[0]?.url,
+    media_type: item.media_type,
+    permalink: `http://www.instagram.com/p/${item.code}`,
+    taken_at: item.taken_at,
+  };
 }
 
 // run
